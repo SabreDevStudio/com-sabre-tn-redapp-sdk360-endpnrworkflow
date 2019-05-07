@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EndPNRWorkflow
+Bundle-SymbolicName: com.sabre.tn.redapp.sdk360.endpnrworkflow;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.sabre.tn.redapp.sdk360.endpnrworkflow.Activator
+Bundle-Vendor: Sabre Travel Network
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.sabre.edge.dynamo.ui,
+ com.sabre.edge.dynamo.flow,
+ com.sabre.edge.redapp.contactdetails,
+ com.sabre.edge.dynamo.cdm;bundle-version="3.4.51",
+ com.sabre.edge.dynamo.ext.cdm;bundle-version="3.4.25",
+ com.sabre.edge.dynamo.redapp.cdm;bundle-version="1.4.2",
+ com.sabre.edge.platform.core.common
+Service-Component: OSGI-INF/EndPNRService.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy

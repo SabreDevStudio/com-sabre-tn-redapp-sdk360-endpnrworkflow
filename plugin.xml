@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.sabre.edge.dynamo.flow.flowextpoint.registry">
+      <flowExtensionPoint
+            callbackService="com.sabre.tn.redapp.sdk360.endpnrworkflow.endpnrservice.EndPNRService:execute"
+            extensionPointId="beforeEndCommand"
+            flowId="dynamo.pnr.end">
+      </flowExtensionPoint>
+   </extension>
+   <extension
+         point="com.sabre.edge.redapp.contactdetails.provider">
+      <contactDetails
+            company="EndPNRWorkflow.contactDetails1"
+            contactName="EndPNRWorkflow.contactDetails1"
+            email="EndPNRWorkflow.contactDetails1"
+            phoneNumber="EndPNRWorkflow.contactDetails1">
+      </contactDetails>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+               <initializer class="com.sabre.tn.redapp.sdk360.endpnrworkflow.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="com.sabre.edge.cf.core.preferences.RedAppsSettings"
+            class="com.sabre.tn.redapp.sdk360.endpnrworkflow.preferences.PreferencePage"
+            id="com.sabre.tn.redapp.sdk360.endpnrworkflow.preference"
+            name="END PNR Settings">
+      </page>
+   </extension>
+
+</plugin>
